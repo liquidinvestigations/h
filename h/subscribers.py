@@ -26,6 +26,12 @@ def add_renderer_globals(event):
             "userid": request.authenticated_userid,
         }
 
+    if "liquid.url" in request.registry.settings:
+        event["liquid"] = {
+            "url": request.registry.settings["liquid.url"],
+            "title": request.registry.settings["liquid.title"],
+        }
+
 
 def publish_annotation_event(event):
     """Publish an annotation event to the message queue."""

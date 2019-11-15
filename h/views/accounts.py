@@ -593,6 +593,9 @@ class DeveloperController:
     @view_config(request_method="POST")
     def post(self):
         """(Re-)generate the user's API token."""
+
+        raise RuntimeError("Developer tokens are disabled in Liquid")
+
         token = self.svc.fetch(self.userid)
 
         if token:

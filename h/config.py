@@ -122,6 +122,10 @@ def configure(environ=None, settings=None):
 
     settings_manager.set("h.websocket_url", "WEBSOCKET_URL")
 
+    # Liquid settings
+    settings_manager.set("liquid.url", "LIQUID_URL")
+    settings_manager.set("liquid.title", "LIQUID_TITLE")
+
     # Debug/development settings
     settings_manager.set("debug_query", "DEBUG_QUERY")
 

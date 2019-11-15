@@ -815,6 +815,7 @@ class TestEditProfileController:
         assert user.location == "Paris"
 
 
+@pytest.mark.skip(reason="No developer token in Liquid")
 @pytest.mark.usefixtures("authenticated_userid", "token_service")
 class TestDeveloperController:
     def test_get_fetches_token(self, controller, token_service, authenticated_userid):
