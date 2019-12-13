@@ -416,41 +416,7 @@
       <div class="search-result-zero {%- if more_info %} search-result-hide-on-small-screens{% endif %}">
         {% if zero_message == '__SHOW_GETTING_STARTED__' %}
           <div>
-            <h2 class="search-result-zero__title">
-              {%- trans %}How to get started{% endtrans -%}
-            </h2>
-            <ol class="search-result-zero__list">
-              <li class="search-result-zero__list-item"><!--
-                !--><a class="link"
-                       href="{{ request.route_url('chrome-extension') }}">
-                  {%- trans %}Install our Chrome extension{% endtrans -%}
-                </a>
-              </li>
-              <li class="search-result-zero__list-item">
-                {%- trans url=request.route_url('activity.search') -%}
-                  Check out some of the
-                  <a class="link" href="{{ url }}">
-                    recently annotated documents
-                  </a>
-                {%- endtrans -%}
-              </li>
-              <li class="search-result-zero__list-item">
-                {%- trans url=user.edit_url -%}
-                  Let other users know more about you by
-                  <a class="link" href="{{ url }}">
-                    adding more information to your profile
-                  </a>
-                {%- endtrans -%}
-              </li>
-              <li class="search-result-zero__list-item">
-                {%- trans -%}
-                  Read more about
-                  <a class="link" href="https://hypothes.is/annotating-with-groups/">
-                    how to annotate with groups
-                  </a>
-                {%- endtrans -%}
-              </li>
-            </ol>
+            <h2 class="search-result-zero__title">Welcome to Hypothesis!</h2>
           </div>
         {% else %}
           <strong>{{ zero_message }}</strong>
